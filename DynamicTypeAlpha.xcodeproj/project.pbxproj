@@ -15,6 +15,7 @@
 		D90022541CDC0FCE006FDE75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90022521CDC0FCE006FDE75 /* LaunchScreen.storyboard */; };
 		D900225F1CDC0FCE006FDE75 /* DynamicTypeAlphaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D900225E1CDC0FCE006FDE75 /* DynamicTypeAlphaTests.m */; };
 		D900226A1CDC0FCE006FDE75 /* DynamicTypeAlphaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D90022691CDC0FCE006FDE75 /* DynamicTypeAlphaUITests.m */; };
+		D90022791CDC1211006FDE75 /* CUNKTextStyleResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D90022781CDC1211006FDE75 /* CUNKTextStyleResponder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D90022651CDC0FCE006FDE75 /* DynamicTypeAlphaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicTypeAlphaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90022691CDC0FCE006FDE75 /* DynamicTypeAlphaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicTypeAlphaUITests.m; sourceTree = "<group>"; };
 		D900226B1CDC0FCE006FDE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90022771CDC1211006FDE75 /* CUNKTextStyleResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUNKTextStyleResponder.h; sourceTree = "<group>"; };
+		D90022781CDC1211006FDE75 /* CUNKTextStyleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUNKTextStyleResponder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				D90022481CDC0FCE006FDE75 /* AppDelegate.m */,
 				D900224A1CDC0FCE006FDE75 /* ViewController.h */,
 				D900224B1CDC0FCE006FDE75 /* ViewController.m */,
+				D90022771CDC1211006FDE75 /* CUNKTextStyleResponder.h */,
+				D90022781CDC1211006FDE75 /* CUNKTextStyleResponder.m */,
 				D900224D1CDC0FCE006FDE75 /* Main.storyboard */,
 				D90022501CDC0FCE006FDE75 /* Assets.xcassets */,
 				D90022521CDC0FCE006FDE75 /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90022791CDC1211006FDE75 /* CUNKTextStyleResponder.m in Sources */,
 				D900224C1CDC0FCE006FDE75 /* ViewController.m in Sources */,
 				D90022491CDC0FCE006FDE75 /* AppDelegate.m in Sources */,
 				D90022461CDC0FCE006FDE75 /* main.m in Sources */,
@@ -498,6 +504,7 @@
 				D90022701CDC0FCE006FDE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D90022711CDC0FCE006FDE75 /* Build configuration list for PBXNativeTarget "DynamicTypeAlphaTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				D90022731CDC0FCE006FDE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D90022741CDC0FCE006FDE75 /* Build configuration list for PBXNativeTarget "DynamicTypeAlphaUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +522,7 @@
 				D90022761CDC0FCE006FDE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
