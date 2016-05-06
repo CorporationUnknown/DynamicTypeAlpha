@@ -42,7 +42,14 @@
     NSString* style = [font.fontDescriptor objectForKey:UIFontDescriptorTextStyleAttribute];
     
     if ( style != nil ) {
-        UIFont* newFont = [UIFont preferredFontForTextStyle:style];
+        UIFontDescriptor* descriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:style];
+        // Uncomment to have every label be Papyrus
+//        NSDictionary* newAttributes = @{
+//                                        UIFontDescriptorTextStyleAttribute : [NSNull null],
+//                                        UIFontDescriptorNameAttribute : @"Papyrus",
+//                                        };
+//        descriptor = [descriptor fontDescriptorByAddingAttributes:newAttributes];
+        UIFont* newFont = [UIFont fontWithDescriptor:descriptor size:0.0];
         label.font = newFont;
     }
     else {
