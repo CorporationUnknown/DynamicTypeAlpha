@@ -10,4 +10,8 @@
 
 @interface CUNKTextStyleResponder : UIResponder
 
+- (instancetype) initWithViewController:(UIViewController*)vc;
+
+- (void) setFontForLabel:(UILabel*)label;
+
 @end
