@@ -39,6 +39,10 @@
                             <constraint firstItem="f8Y-UO-Ml0" firstAttribute="leading" secondItem="e28-97-9gx" secondAttribute="leading" id="zOk-tY-qwD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headlineLabel" destination="e28-97-9gx" id="ide-3q-vPR"/>
+                        <outlet property="subheadLabel" destination="f8Y-UO-Ml0" id="l8v-n6-tQU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
