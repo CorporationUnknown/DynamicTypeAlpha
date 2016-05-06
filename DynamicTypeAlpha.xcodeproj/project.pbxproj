@@ -16,6 +16,7 @@
 		D900225F1CDC0FCE006FDE75 /* DynamicTypeAlphaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D900225E1CDC0FCE006FDE75 /* DynamicTypeAlphaTests.m */; };
 		D900226A1CDC0FCE006FDE75 /* DynamicTypeAlphaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D90022691CDC0FCE006FDE75 /* DynamicTypeAlphaUITests.m */; };
 		D90022791CDC1211006FDE75 /* CUNKTextStyleResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D90022781CDC1211006FDE75 /* CUNKTextStyleResponder.m */; };
+		D900227C1CDC339F006FDE75 /* UIViewController+CUNKDynamicType.m in Sources */ = {isa = PBXBuildFile; fileRef = D900227B1CDC339F006FDE75 /* UIViewController+CUNKDynamicType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		D900226B1CDC0FCE006FDE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90022771CDC1211006FDE75 /* CUNKTextStyleResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUNKTextStyleResponder.h; sourceTree = "<group>"; };
 		D90022781CDC1211006FDE75 /* CUNKTextStyleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUNKTextStyleResponder.m; sourceTree = "<group>"; };
+		D900227A1CDC339F006FDE75 /* UIViewController+CUNKDynamicType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CUNKDynamicType.h"; sourceTree = "<group>"; };
+		D900227B1CDC339F006FDE75 /* UIViewController+CUNKDynamicType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CUNKDynamicType.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				D900224B1CDC0FCE006FDE75 /* ViewController.m */,
 				D90022771CDC1211006FDE75 /* CUNKTextStyleResponder.h */,
 				D90022781CDC1211006FDE75 /* CUNKTextStyleResponder.m */,
+				D900227A1CDC339F006FDE75 /* UIViewController+CUNKDynamicType.h */,
+				D900227B1CDC339F006FDE75 /* UIViewController+CUNKDynamicType.m */,
 				D900224D1CDC0FCE006FDE75 /* Main.storyboard */,
 				D90022501CDC0FCE006FDE75 /* Assets.xcassets */,
 				D90022521CDC0FCE006FDE75 /* LaunchScreen.storyboard */,
@@ -278,6 +283,7 @@
 				D90022791CDC1211006FDE75 /* CUNKTextStyleResponder.m in Sources */,
 				D900224C1CDC0FCE006FDE75 /* ViewController.m in Sources */,
 				D90022491CDC0FCE006FDE75 /* AppDelegate.m in Sources */,
+				D900227C1CDC339F006FDE75 /* UIViewController+CUNKDynamicType.m in Sources */,
 				D90022461CDC0FCE006FDE75 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
