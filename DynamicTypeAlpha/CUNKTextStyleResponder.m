@@ -39,7 +39,7 @@
 
 - (void) setFontForLabel:(UILabel*)label {
     UIFont* font = label.font;
-    NSString* style = [font.fontDescriptor objectForKey:@"NSCTFontUIUsageAttribute"];
+    NSString* style = [font.fontDescriptor objectForKey:UIFontDescriptorTextStyleAttribute];
     
     if ( style != nil ) {
         UIFont* newFont = [UIFont preferredFontForTextStyle:style];
