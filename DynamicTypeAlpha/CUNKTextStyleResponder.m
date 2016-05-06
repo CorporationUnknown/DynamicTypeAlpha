@@ -19,10 +19,20 @@
 
 @implementation CUNKTextStyleResponder
 
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
+}
+
 - (instancetype) initWithViewController:(UIViewController*)vc {
     self = [super init];
     if ( self != nil ) {
         self->_viewController = vc;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(contentSizeCategoryDidChange:)
+                                                     name:UIContentSizeCategoryDidChangeNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -49,6 +59,10 @@
             [self updateFontsForLabelsInView:subview];
         }
     }
+}
+
+- (void) contentSizeCategoryDidChange:(NSNotification*)notification {
+    [self updateFonts];
 }
 
 #pragma mark - UIResponder chain handling
