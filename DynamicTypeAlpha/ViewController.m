@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "CUNKTextStyleResponder.h"
+#import "UIViewController+CUNKDynamicType.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.textStyleResponder = [[CUNKTextStyleResponder alloc] initWithViewController:self];
+    
+    [self cunk_updateFonts];
 }
 
 - (void)didReceiveMemoryWarning {
