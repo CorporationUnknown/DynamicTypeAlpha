@@ -14,4 +14,6 @@
 
 - (void) setFontForLabel:(UILabel*)label;
 
+- (void) updateFonts;
+
 @end

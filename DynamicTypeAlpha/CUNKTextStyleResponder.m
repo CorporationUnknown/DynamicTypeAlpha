@@ -28,7 +28,27 @@
 }
 
 - (void) setFontForLabel:(UILabel*)label {
-    
+    NSLog(@"%s : %@", __PRETTY_FUNCTION__, label);
+}
+
+- (void) updateFonts {
+    [self updateFontsForLabelsInView:self.viewController.viewIfLoaded];
+}
+
+- (void) updateFontsForLabelsInView:(UIView*)view {
+    for ( UIView* subview in view.subviews ) {
+        if ( [subview isKindOfClass:[UILabel class]] ) {
+            UILabel* label = (UILabel*)subview;
+            [[UIApplication sharedApplication] sendAction:@selector(setFontForLabel:)
+                                                       to:nil
+                                                     from:label
+                                                 forEvent:nil];
+        }
+        else {
+            // recurse
+            [self updateFontsForLabelsInView:subview];
+        }
+    }
 }
 
 #pragma mark - UIResponder chain handling
