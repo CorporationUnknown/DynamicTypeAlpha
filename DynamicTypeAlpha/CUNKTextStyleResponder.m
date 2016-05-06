@@ -38,7 +38,17 @@
 }
 
 - (void) setFontForLabel:(UILabel*)label {
-    NSLog(@"%s : %@", __PRETTY_FUNCTION__, label);
+    UIFont* font = label.font;
+    NSString* style = [font.fontDescriptor objectForKey:@"NSCTFontUIUsageAttribute"];
+    
+    if ( style != nil ) {
+        UIFont* newFont = [UIFont preferredFontForTextStyle:style];
+        label.font = newFont;
+    }
+    else {
+        // DEBUG: Scream out NOT SUPPORTING DYNAMIC TYPE
+        label.backgroundColor = [UIColor magentaColor];
+    }
 }
 
 - (void) updateFonts {
