@@ -8,10 +8,14 @@
 
 #import "ViewController.h"
 
+#import "CUNKTextStyleResponder.h"
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subheadLabel;
+
+@property (strong, nonatomic) CUNKTextStyleResponder* textStyleResponder;
 
 @end
 
@@ -19,12 +23,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.textStyleResponder = [[CUNKTextStyleResponder alloc] initWithViewController:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIResponder*) nextResponder {
+    return self.textStyleResponder;
 }
 
 @end

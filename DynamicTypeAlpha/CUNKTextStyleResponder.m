@@ -31,6 +31,8 @@
     
 }
 
+#pragma mark - UIResponder chain handling
+
 - (UIResponder*) nextResponder {
     UIResponder* nextResponder = nil;
     UIResponder* parentResponder = self.viewController;
