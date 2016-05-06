@@ -33,15 +33,27 @@
 
 #pragma mark - UIResponder chain handling
 
+// Implementing -superNextResponder defines the selector for our
+// -nextResponder call below.
+// It also serves as a nice easy copy-paste to add to your view controller.
+- (UIResponder*) superNextResponder {
+    return [super nextResponder];
+}
+
 - (UIResponder*) nextResponder {
     UIResponder* nextResponder = nil;
     UIResponder* parentResponder = self.viewController;
-    // Runtime contortions to invoke the view controller's superclass' -nextResponder method
-    // Since the view controller's -nextResponder method would just return us again
-    Class vcSuper = class_getSuperclass(parentResponder.class);
-    Method method = class_getInstanceMethod(vcSuper, @selector(nextResponder));
-    id (*_method_invoke_super)(id, Method, ...) = (id (*)(id, Method, ...)) method_invoke;
-    nextResponder = _method_invoke_super(parentResponder, method);
+    if ( [parentResponder respondsToSelector:@selector(superNextResponder)] ) {
+        nextResponder = [(id)parentResponder superNextResponder];
+    }
+    else {
+        // Runtime contortions to invoke the view controller's superclass' -nextResponder method
+        // Since the view controller's -nextResponder method would just return us again
+        Class vcSuper = class_getSuperclass(parentResponder.class);
+        Method method = class_getInstanceMethod(vcSuper, @selector(nextResponder));
+        id (*_method_invoke_super)(id, Method, ...) = (id (*)(id, Method, ...)) method_invoke;
+        nextResponder = _method_invoke_super(parentResponder, method);
+    }
     return nextResponder;
 }
 
